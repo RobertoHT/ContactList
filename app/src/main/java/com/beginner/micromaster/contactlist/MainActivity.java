@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -27,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.contact_list_view);
         listView.setAdapter(adapter);
+        listView.setClickable(true);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent detailIntent = new Intent(getApplicationContext(), DetailActivity.class);
+                detailIntent.putExtra("contact",arrayOfUsers.get(position));
+                startActivity(detailIntent);
+            }
+        });
 
         final Button button = (Button) findViewById(R.id.add_new_contact);
         button.setOnClickListener(new View.OnClickListener() {

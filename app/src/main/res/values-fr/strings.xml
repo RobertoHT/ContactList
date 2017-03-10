@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Liste de contacts</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_name">Prénom</string>
+    <string name="hint_last_name">Nom de Famille</string>
+    <string name="hint_phone_number">Numéro de Téléphone</string>
+    <string name="button_new_contact">Créer un Contact</string>
+    <string name="button_add_contact">Ajouter un Nouveau Contact</string>
+
+    <!--TODO: add content description string for the rest of the views on activity_main.xml-->
+    <string name="description_input_name">Nom d\'utilisateur</string>
+
+</resources>

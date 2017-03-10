@@ -3,10 +3,11 @@ package com.beginner.micromaster.contactlist.models;
 import com.orm.SugarRecord;
 
 
+import java.io.Serializable;
 import java.util.List;
 
 
-public class Contact extends SugarRecord {
+public class Contact extends SugarRecord implements Serializable {
 
     private String name;
     private String lastName;
